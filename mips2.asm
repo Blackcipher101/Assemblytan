@@ -8,13 +8,13 @@
  .text
  	.globl main
  	main:
- 		addi $a3,$zero, 3
- 		addi $a2, $zero, 2
- 		jal power
+ 		addi $a3,$zero, 3    #parameters
+ 		addi $a2, $zero, 2   #parameters
+ 		jal power            #call
  	
  	
 		li $v0,1
-		sw $v1, theAnswer
+		sw $v1, theAnswer   #return
 		li $v0,1
 		lw $a0, theAnswer
 		syscall
